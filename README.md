@@ -116,17 +116,29 @@ Letter w/ Apostrophe - counterclockwise turn
 All inputs are ONE 90° quarter turn
 
 Face turn controls-
-U(white) → Dodge Roll (B key)**
-U' → Sprint Toggle (hold/release Space)**
+
+U(white) → Dodge Roll (B key)***
+
+U' → Sprint Toggle (hold/release Space)***
+
 R(red) → Light Attack (LMB)
+
 R' → Heavy Attack (RMB)
+
 L(orange) → Shield/Spell/offhand (J key)
+
 L' → Parry/Weapon Art (Ctrl)
+
 D(yellow) → Rotate Items (Down Arrow)
+
 D' → Drink Estus/Use Item (R key)
-F(green) → Lock On (Q key) 
+
+F(green) → Lock On (Q key)
+
 F' → Jump (H key)
-B(blue) → 2-Hand RH Weapon (F key) 
+
+B(blue) → 2-Hand RH Weapon (F key)
+
 B' → Interact (E key)
 
 ***since Dark Souls has sprint/dodge roll as the same button/key usually, this was a little tricky. I have the code set to toggle hold/release sprint with each U' turn, but U turn/dodge roll out of a sprint also releases the space key, to feel more like natural DS3 controls. If you dodge roll out of a sprint, you'll have to U' after to sprint out of the roll.***
