@@ -50,7 +50,7 @@ This is currently half-solved with a zero/neutral state reset hotkey, that needs
 - Only 12 face turns total limits keybinds and 6 total gyroscope directions. Total 18 inputs available.
 - current version can only be run from console/powershell window, and inside of a virtual environment. Immediate priority is to simplify for users by making a .bat file to run it from, and eventually making it .exe. 
 - Keybinds use the Windows SendInput API (via scan codes), so editing them is a little more involved than just changing a variable to "W" — you'll need the scan code for whichever key you want. A quick search for "SendInput scan codes" will get you the reference table you need.
-- REquires a paired/known GoCube Edge, unkown if other smartcubes are compatible. Almost certainly not Gan brand cubes (very proprietary)
+- Requires a paired/known GoCube Edge, unkown if other smartcubes are compatible. Almost certainly not Gan brand cubes (very proprietary)
 - Directinput name for module is inaccurate currently, This actually uses the Windows SendInput API via ctypes, not legacy DirectInput API. This is just a leftover name from before I changed methods because the game window wasn't registering inputs from DirectInput.
 
 ## Setup
