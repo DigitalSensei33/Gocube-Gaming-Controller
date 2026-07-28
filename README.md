@@ -36,7 +36,7 @@ The project is fully playable as-is (v0.7) and was used to complete Dark Souls 3
 - Debug/stats logging (latency, drop rate, ghosting prevented)
 - Keyboard and mouse input emulation
 - Fully playable in Dark Souls 3 as-is.
-- Configurable key mappings
+- Key mapping customizable (via source edit — config module planned)
 - Very low input delay.
 
 ## Known Issues/Limitations
@@ -101,7 +101,7 @@ You're ready to play once calibration completes.
 
 ## Controls
 
-Currently coded to a customized dark souls 3 control scheme, using only keyboard inputs and mouse clicks. Can be edited to change which face turns (and directions of face turns) press which keys (in face turns.py ***ADD LINE #S). Can also be edited to change movement and camera with gyroscope tilting to other desired controls. 
+Currently coded to a customized dark souls 3 control scheme, using only keyboard inputs and mouse clicks. Can be edited to change which face turns (and directions of face turns) press which keys (in face-turns.py ***ADD LINE #S). Can also be edited to change movement and camera with gyroscope tilting to other desired controls. 
 
 ***IMPORTANT***
 This is all specifically coded with green in front (towards you) and white on top.
@@ -116,20 +116,20 @@ Letter w/ Apostrophe - counterclockwise turn
 All inputs are ONE 90° quarter turn
 
 Face turn controls-
-U(wht) → Dodge Roll (B key)***
+U(white) → Dodge Roll (B key)***
 U' → Sprint Toggle (hold/release Space)***
 R(red) → Light Attack (LMB)
 R' → Heavy Attack (RMB)
-L(orng) → Shield/Spell/offhand (J key)
+L(orange) → Shield/Spell/offhand (J key)
 L' → Parry/Weapon Art (Ctrl)
-D(ylw) → Rotate Items (Down Arrow) 
+D(yellow) → Rotate Items (Down Arrow) 
 D' → Drink Estus/Use Item (R key) 
-F(grn) → Lock On (Q key) 
+F(green) → Lock On (Q key) 
 F' → Jump (H key)
-B(blu) → 2-Hand RH Weapon (F key) 
+B(blue) → 2-Hand RH Weapon (F key) 
 B' → Interact (E key)
 
-*** since Dark Souls has sprint/dodge roll as the same button/key usually, this was a little tricky. I have the code set to toggle hold/release sprint with each U' turn, but U turn/dodge roll out of a sprint also releases the space key, to feel more like natural DS3 controls. If you dodge roll out of a sprint, you'll have to U' after to sprint out of the roll.
+***since Dark Souls has sprint/dodge roll as the same button/key usually, this was a little tricky. I have the code set to toggle hold/release sprint with each U' turn, but U turn/dodge roll out of a sprint also releases the space key, to feel more like natural DS3 controls. If you dodge roll out of a sprint, you'll have to U' after to sprint out of the roll.***
 
 Gyroscope controls
 Just think of the top (white) face of the cube as a joystick and tilt it around for movement
