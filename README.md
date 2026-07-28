@@ -153,7 +153,7 @@ Roll right/Tilt cube right - move right (D key)
 Yaw left/turn cube left (like unscrewing it from something beneath it) - cam pan left (O key?)
 Yaw right/turn cube right - cam pan right (P key?)
 
-Future plans/roadmap
+## Future plans/roadmap
 
 - Fix yaw drift issue **TOP PRIORITY**
 - add .bat file for easier user function
