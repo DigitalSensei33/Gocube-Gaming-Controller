@@ -117,7 +117,7 @@ All inputs are ONE 90° quarter turn
 
 Face turn controls-
 
-- U(white) → Dodge Roll (B key)***-
+- U(white) → Dodge Roll (B key)***
 - U' → Sprint Toggle (hold/release Space)***
 - R(red) → Light Attack (LMB)
 - R' → Heavy Attack (RMB)
