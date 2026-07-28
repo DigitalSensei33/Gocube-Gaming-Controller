@@ -135,12 +135,12 @@ Face turn controls-
 Gyroscope controls
 Just think of the top (white) face of the cube as a joystick and tilt it around for movement
 
-Pitch forward/Tilt cube away from you - forward (W key)
-Pitch back/Tilt cube towards you - backward (S key)
-Roll left/Tilt cube left - move left (A key)
-Roll right/Tilt cube right - move right (D key)
-Yaw left/turn cube left (like unscrewing it from something beneath it) - cam pan left (O key?)
-Yaw right/turn cube right - cam pan right (P key?)
+- Pitch forward/Tilt cube away from you - forward (W key)
+- Pitch back/Tilt cube towards you - backward (S key)
+- Roll left/Tilt cube left - move left (A key)
+- Roll right/Tilt cube right - move right (D key)
+- Yaw left/turn cube left (like unscrewing it from something beneath it) - cam pan left (O key)
+- Yaw right/turn cube right - cam pan right (P key)
 
 ## Future plans/roadmap
 
