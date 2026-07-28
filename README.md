@@ -116,14 +116,14 @@ Letter w/ Apostrophe - counterclockwise turn
 All inputs are ONE 90° quarter turn
 
 Face turn controls-
-U(white) → Dodge Roll (B key)***
-U' → Sprint Toggle (hold/release Space)***
+U(white) → Dodge Roll (B key)**
+U' → Sprint Toggle (hold/release Space)**
 R(red) → Light Attack (LMB)
 R' → Heavy Attack (RMB)
 L(orange) → Shield/Spell/offhand (J key)
 L' → Parry/Weapon Art (Ctrl)
-D(yellow) → Rotate Items (Down Arrow) 
-D' → Drink Estus/Use Item (R key) 
+D(yellow) → Rotate Items (Down Arrow)
+D' → Drink Estus/Use Item (R key)
 F(green) → Lock On (Q key) 
 F' → Jump (H key)
 B(blue) → 2-Hand RH Weapon (F key) 
