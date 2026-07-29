@@ -40,12 +40,12 @@ The project is fully playable as-is (v0.7) and was used to complete Dark Souls 3
 - Very low input delay.
 
 ## Known Issues/Limitations
-
+-------------
 ***IMPORTANT***
 - HIGH PRIORITY - Current version (0.7) has gradual drift in gyroscope readings for Yaw only. Over time, mostly just when moving forward, the yaw will gradually drift to a negative integer value when held at zero yaw position, which will begin panning camera left while only moving forward. Pitching forward for movement increases the speed at which this happens. I have mitigated the drift while at neutral zeroed position, (green front/towards you, white up) but the drift rate increases with (as far as i know, only positive) pitch. 
 This is currently half-solved with a zero/neutral state reset hotkey, that needs used every 10 minutes or so depending on your usage. Press 5 on numpad to reset the gyroscope to zero, make sure you're holding the cube in proper neutral position.
 - Movement + camera control unusable simultaneously above ~35° pitch due to yaw isolation freeze from attempted drift fix. Isolation-mode drift compensation is unbounded / not paused during isolation.\
-***IMPORTANT***
+-------------
 
 - Only 12 face turns total limits keybinds and 6 total gyroscope directions. Total 18 inputs available.
 - current version can only be run from console/powershell window, and inside of a virtual environment. Immediate priority is to simplify for users by making a .bat file to run it from, and eventually making it .exe. 
