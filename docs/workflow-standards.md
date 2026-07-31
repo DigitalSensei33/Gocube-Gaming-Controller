@@ -95,7 +95,7 @@ Priority:
 Environment:
 ```
 
-Full detailed reports live in `/documentation/qa/bug-reports/`. Kanban cards may carry a short summary + reference (`See BUG-004`) once that system is populated.
+Full detailed reports live in `/docs/QA/bug-reports/`. Kanban cards may carry a short summary + reference (`See BUG-004`) once that system is populated.
 
 ---
 
@@ -110,12 +110,12 @@ Expected Result:
 Related Issue:
 ```
 
-Test case definitions (the "library" — what a test *is*) live in `/documentation/qa/test-cases/`, filed under the category-prefix ID system (Section 6), one file per test case, named by ID only (e.g., `BLE-01.md`).
+Test case definitions (the "library" — what a test *is*) live in `/docs/QA/test-cases/`, filed under the category-prefix ID system (Section 6), one file per test case, named by ID only (e.g., `BLE-01.md`).
 
 Execution history is tracked as **Test Runs** — one file per testing session, named by date, containing results for every test case covered that session. This avoids individual test cases accumulating ever-growing history files, and keeps each session as a clean, self-contained snapshot:
 
 ```
-/documentation/qa/test-logs/2026-08-05.md
+/docs/QA/test-logs/2026-08-05.md
 
 ## Test Run — 2026-08-05
 
@@ -154,19 +154,14 @@ Two independent, purpose-built ID systems exist **outside** of GitHub's auto-ass
 ### Test Cases: Category-Prefix System
 Format: `[CATEGORY]-##`, independent counters per category (no fixed range limits).
 
-Example categories (adjust as needed):
-- `BLE-01`, `BLE-02` — connection/detection tests
-- `INPUT-01`, `INPUT-02` — face turn / keypress tests
-- `GYRO-01`, `GYRO-02` — movement/camera detection tests
+Example categories:
+- `BLE` — connection/detection tests
+- `FACE` — face-turn detection tests
+- `GYRO` — orientation/sensor detection tests (thresholds, calibration, drift, HUD accuracy)
+- `QUEUE` — input execution/reliability tests (anti-ghosting, timing, detected input → actual keypress)
+- `HUD` — debug HUD display accuracy
 
-**File naming:** test case files use the bare ID only (e.g., `BLE-01.md`), kept short and uniform. A single `test-case-index.md` maps each ID to a short human-readable description, so IDs stay lookup-able without long filenames:
-
-```
-| ID | Description |
-|---|---|
-| BLE-01 | Cold-start BLE connection |
-| INPUT-01 | Face turn detection, all 12 inputs |
-```
+File naming: test case files use the bare ID only (e.g., `BLE-01.md`), kept short and uniform. See Section 4a for the test case and test run/log structure.
 
 **Regression test docs** do not duplicate test steps — they curate a checklist of existing Test Case IDs relevant to a given type of change (e.g., "After any `input_queue.py` change, re-run: BLE-01, INPUT-02, GYRO-01").
 
@@ -175,9 +170,9 @@ Example categories (adjust as needed):
 ## 7. Documentation Folder Structure
 
 ```
-/documentation
+/docs
   workflow-standards.md          ← this file (Coordination)
-  /qa
+  /QA
     /bug-reports
       BUG-001.md
       BUG-002.md
@@ -194,7 +189,7 @@ Example categories (adjust as needed):
     configuration-file-specification.md
 ```
 
-- **`/qa`** — owned by QA. Flat files, ID-referenced, not nested by task/issue number (a bug or test case may relate to multiple issues over time).
+- **`/QA`** — owned by QA. Flat files, ID-referenced, not nested by task/issue number (a bug or test case may relate to multiple issues over time).
 - **`/dev-docs`** — owned by Coding. Reference material consulted repeatedly across many tasks (naming conventions, protocol documentation, mapping references).
 - **Architecture.md** — planned, but scoped as its own larger task rather than bundled with quick-reference docs. Likely a collaborative write given the depth of technical/design reasoning involved.
 - **Changelog** — planned addition; distinct from Milestone acceptance criteria (which are the *plan*) — the changelog is the *historical record* once shipped.
