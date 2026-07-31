@@ -35,7 +35,7 @@ Type labels represent **what kind of work it is** — tracked via GitHub Labels.
 
 **Feature vs. Improvement test:** If it's the *first version* of something that does a new thing → `feature`. If it's making an *existing, working* thing better/faster/cleaner → `improvement`.
 
-**Kept GitHub defaults** (available, used situationally):
+**Situational GitHub defaults**:
 
 | Label | Meaning |
 |---|---|
@@ -99,12 +99,29 @@ Full detailed reports live in `/documentation/qa/bug-reports/`. Kanban cards may
 
 ---
 
+## 4a. Test Case Template
+
+```
+ID:
+Title:
+Preconditions:
+Steps:
+Expected Result:
+Actual Result:
+Status: (Pass / Fail / Blocked)
+Related Issue:
+```
+
+Full test cases live in `/documentation/qa/test-cases/`, filed under the category-prefix ID system (Section 6). `Expected Result` is written before the test is run; `Actual Result` and `Status` are filled in after.
+
+---
+
 ## 5. Sub-Issues
 
 GitHub sub-issues are used to represent two distinct relationships. Because the board does not visually nest sub-issues, **the relationship type is indicated by a prefix on the CHILD card's title**:
 
-- **`[BLOCKER]`** — must be resolved before the parent can honestly move to Done. Example: `[BLOCKER] Edit/remove yaw lock drift fix attempt` (child of Yaw Drift bug).
-- **`[FOLLOW-ON]`** — a related gap discovered after the parent was already shipped/Done. Does not block the parent's Done status. Example: `[FOLLOW-ON] BLE Detection reliability investigation` (child of Initial Bluetooth Connection, already Done).
+- **`[BLOCKER]`** OR **`[BLOCK]`** — must be resolved before the parent can honestly move to Done. Example: `[BLOCK] Edit/remove yaw lock drift fix attempt` (child of Yaw Drift bug).
+- **`[FOLLOW-ON]`** OR **`[FOLLOW]`** — a related gap discovered after the parent was already shipped/Done. Does not block the parent's Done status. Example: `[FOLLOW] BLE Detection reliability investigation` (child of Initial Bluetooth Connection, already Done).
 
 **QA as blocker rule:** A Coding task should not move to Done until its paired QA task has passed. Where practical, link the QA task as a `[BLOCKER]` sub-issue of the Coding task so the incomplete checklist visually reflects "not truly done yet."
 
