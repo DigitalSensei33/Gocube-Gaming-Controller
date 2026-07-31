@@ -35,7 +35,7 @@ Type labels represent **what kind of work it is** — tracked via GitHub Labels.
 
 **Feature vs. Improvement test:** If it's the *first version* of something that does a new thing → `feature`. If it's making an *existing, working* thing better/faster/cleaner → `improvement`.
 
-**Situational GitHub defaults**:
+**Kept GitHub defaults** (available, used situationally):
 
 | Label | Meaning |
 |---|---|
@@ -107,12 +107,26 @@ Title:
 Preconditions:
 Steps:
 Expected Result:
-Actual Result:
-Status: (Pass / Fail / Blocked)
 Related Issue:
 ```
 
-Full test cases live in `/documentation/qa/test-cases/`, filed under the category-prefix ID system (Section 6). `Expected Result` is written before the test is run; `Actual Result` and `Status` are filled in after.
+Test case definitions (the "library" — what a test *is*) live in `/documentation/qa/test-cases/`, filed under the category-prefix ID system (Section 6), one file per test case, named by ID only (e.g., `BLE-01.md`).
+
+Execution history is tracked as **Test Runs** — one file per testing session, named by date, containing results for every test case covered that session. This avoids individual test cases accumulating ever-growing history files, and keeps each session as a clean, self-contained snapshot:
+
+```
+/documentation/qa/test-logs/2026-08-05.md
+
+## Test Run — 2026-08-05
+
+| Test ID | Result | Notes |
+|---|---|---|
+| BLE-01  | Pass | Cold start, ~4s to connect |
+| GYRO-01 | Fail | Yaw drift confirmed, see BUG-003 |
+| FACE-01 | Pass | All 12 turns registered correctly |
+```
+
+If additional testers are ever added, filenames can include initials to avoid collisions on the same date (e.g., `2026-08-05-MG.md`), but this isn't needed while testing solo.
 
 ---
 
@@ -120,8 +134,8 @@ Full test cases live in `/documentation/qa/test-cases/`, filed under the categor
 
 GitHub sub-issues are used to represent two distinct relationships. Because the board does not visually nest sub-issues, **the relationship type is indicated by a prefix on the CHILD card's title**:
 
-- **`[BLOCKER]`** OR **`[BLOCK]`** — must be resolved before the parent can honestly move to Done. Example: `[BLOCK] Edit/remove yaw lock drift fix attempt` (child of Yaw Drift bug).
-- **`[FOLLOW-ON]`** OR **`[FOLLOW]`** — a related gap discovered after the parent was already shipped/Done. Does not block the parent's Done status. Example: `[FOLLOW] BLE Detection reliability investigation` (child of Initial Bluetooth Connection, already Done).
+- **`[BLOCKER]`** — must be resolved before the parent can honestly move to Done. Example: `[BLOCKER] Edit/remove yaw lock drift fix attempt` (child of Yaw Drift bug).
+- **`[FOLLOW-ON]`** — a related gap discovered after the parent was already shipped/Done. Does not block the parent's Done status. Example: `[FOLLOW-ON] BLE Detection reliability investigation` (child of Initial Bluetooth Connection, already Done).
 
 **QA as blocker rule:** A Coding task should not move to Done until its paired QA task has passed. Where practical, link the QA task as a `[BLOCKER]` sub-issue of the Coding task so the incomplete checklist visually reflects "not truly done yet."
 
@@ -168,9 +182,11 @@ Example categories (adjust as needed):
       BUG-001.md
       BUG-002.md
     /test-cases
-      test-case-index.md
       BLE-01.md
       INPUT-01.md
+    /test-logs
+      2026-08-05.md
+      2026-08-12.md
   /dev-docs
     function-naming-conventions.md
     ble-packet-documentation.md
