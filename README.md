@@ -4,7 +4,7 @@ GoCube Gaming Controller is a Python application that converts (specifically) a 
 
 Fair warning: I'm not a software developer. This started as a fun idea I messed with after work, and I learned most of what I needed as I went. It's definitely not perfect, but it works well enough that I managed to beat Dark Souls 3 with it, which was the whole goal.
 
-This used Ignisco's smartcube gaming controller repo (https://github.com/ignisco/Smart-Cube-Gaming-Controller) as a basic starting point/template. The only real remaining stuff from their build is some of the face-turns.py file.
+This used Ignisco's smartcube gaming controller repo (https://github.com/ignisco/Smart-Cube-Gaming-Controller) as a basic starting point/template. The only real remaining stuff from their build is a good chunk of directinput.py.
 
 Mostly uses the Bleak library for BLE communication and the Windows SendInput API for keyboard/mouse emulation. I worked with Claude sonnet and opus in late 2025 to make the code.  
 
