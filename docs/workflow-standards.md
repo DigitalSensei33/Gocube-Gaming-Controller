@@ -137,7 +137,12 @@ GitHub sub-issues are used to represent two distinct relationships. Because the 
 - **`[BLOCKER]`** — must be resolved before the parent can honestly move to Done. Example: `[BLOCKER] Edit/remove yaw lock drift fix attempt` (child of Yaw Drift bug).
 - **`[FOLLOW-ON]`** — a related gap discovered after the parent was already shipped/Done. Does not block the parent's Done status. Example: `[FOLLOW-ON] BLE Detection reliability investigation` (child of Initial Bluetooth Connection, already Done).
 
-**QA as blocker rule:** A Coding task should not move to Done until its paired QA task has passed. Where practical, link the QA task as a `[BLOCKER]` sub-issue of the Coding task so the incomplete checklist visually reflects "not truly done yet."
+**QA as blocker rule:** A Coding task should not move to Done until it has been verified.
+
+- **Simple verification** ("does this feature/fix work as described") does not need a separate QA card. Verify inline on the Coding card itself: note the result and reference the relevant test case/log directly in that card's `Outcome` field (e.g., *"Verified via GYRO-02, see test log 2026-08-05, Pass"*) before moving it to Done.
+- **Substantial or investigative QA work** (quantifying a failure rate, hunting for patterns across multiple sessions, characterizing a bug in depth — work with real scope of its own, not just a pass/fail check) still gets its own separate QA card, linked as a `[BLOCKER]` sub-issue where appropriate. Example: #14/#15 (BLE detection reliability investigation).
+
+Where a separate QA card *is* used, it should be linked as a `[BLOCKER]` sub-issue of the Coding task so the parent's incomplete checklist visually reflects "not truly done yet."
 
 ---
 
