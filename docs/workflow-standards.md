@@ -69,6 +69,10 @@ Chore          → "Task:" or straight into Description
 
 Formatting effort scales to **how settled and close-to-active the work is** — not rigidly to column or type.
 
+**Heading levels:** Card bodies, bug reports, and test cases use Markdown headers for field labels, not bold text:
+- `#` (largest) — reserved for urgent/top-of-card flags that need to stand out immediately, e.g. `# DUPLICATE — see #19`. Used sparingly, at most once per card.
+- `##` — standard field labels (Feature/Issue/Test/Task, Description, Acceptance Criteria, Outcome, Remaining Issues, etc.). This is the default level for all regular template fields, applied consistently across Kanban cards, bug reports, and test cases alike.
+
 ### Backlog (not yet planned in detail)
 Title + 1–2 sentence description is sufficient. Full template not required.
 
