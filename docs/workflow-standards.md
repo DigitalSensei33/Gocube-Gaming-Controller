@@ -147,10 +147,14 @@ If additional testers are ever added, filenames can include initials to avoid co
 
 ## 5. Sub-Issues
 
+**Live bugs — standard model:** A newly discovered, not-yet-fixed bug gets **one continuous card**, not a separate "found it" card plus a separate "fixed it" card. Role starts as whichever makes sense for the current work (often QA, if characterization is still needed) and gets **reassigned to Coding** once the fix is underway, on the same card, noted via comment at the handoff. The card is only moved to Done once the bug is genuinely resolved and verified — never before. `Outcome` captures the eventual resolution once real.
+
+**Exception — fully resolved retroactive history:** When documenting a bug *after the fact*, where the discovery and fix are both already known and complete, splitting into a linked "found it" (QA) + "fixed it" (Coding) card pair is acceptable and can read more clearly as history (see #34/#35, sub-issues of #36). This is a narrative choice for backfilled history, not the live-workflow default.
+
 GitHub sub-issues are used to represent two distinct relationships. Because the board does not visually nest sub-issues, **the relationship type is indicated by a prefix on the CHILD card's title**:
 
-- **`[BLOCKER]`** — must be resolved before the parent can honestly move to Done. Example: `[BLOCKER] Edit/remove yaw lock drift fix attempt` (child of Yaw Drift bug).
-- **`[FOLLOW-ON]`** — a related gap discovered after the parent was already shipped/Done. Does not block the parent's Done status. Example: `[FOLLOW-ON] BLE Detection reliability investigation` (child of Initial Bluetooth Connection, already Done).
+- **`[BLOCKER]`** (or shortened `[BLOCK]`) — must be resolved before the parent can honestly move to Done. Example: `[BLOCKER] Edit/remove yaw lock drift fix attempt` (child of Yaw Drift bug).
+- **`[FOLLOW-ON]`** (or shortened `[FOLLOW]`) — a related gap discovered after the parent was already shipped/Done. Does not block the parent's Done status. Example: `[FOLLOW-ON] BLE Detection reliability investigation` (child of Initial Bluetooth Connection, already Done).
 
 **QA as blocker rule:** A Coding task should not move to Done until it has been verified.
 
