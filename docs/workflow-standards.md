@@ -32,8 +32,23 @@ Type labels represent **what kind of work it is** — tracked via GitHub Labels.
 | `improvement` | Refining/optimizing something that already works |
 | `documentation` | Improvements or additions to project documentation |
 | `research` | Investigative work (external research, data-gathering) not yet tied to a specific fix or feature |
+| `test` | Verification/testing work not itself investigating a bug (e.g., running an established test case, confirming a feature meets Acceptance Criteria) |
+| `chore` | Maintenance/tooling/organizational work (renaming files, `.gitignore` edits, folder setup) — not a feature, improvement, or bug |
 
 **Feature vs. Improvement test:** If it's the *first version* of something that does a new thing → `feature`. If it's making an *existing, working* thing better/faster/cleaner → `improvement`.
+
+**Note on "Issue" as a field name:** GitHub uses "Issue" as its umbrella container term for all card types (bugs, features, tasks alike), which is inconsistent with how most real-world PM terminology uses "issue" to mean specifically a defect/problem. To avoid confusion, this project does **not** use "Issue:" as a generic opening field. Instead, the first field of a card's body matches its type label:
+
+```
+Bug            → "Issue:"        (the problem/question being addressed)
+Feature        → "Feature:"      (what new thing is being built)
+Improvement    → "Improvement:"  (what's being refined)
+Documentation  → "Documentation:" or straight into Description
+Test/QA        → "Test:" or "Goal:" (what's being verified)
+Chore          → "Task:" or straight into Description
+```
+
+"Issue" is reserved specifically for bugs — framed as the problem/question being investigated, not the desired end state (that's what Acceptance Criteria is for).
 
 **Kept GitHub defaults** (available, used situationally):
 
@@ -58,10 +73,10 @@ Formatting effort scales to **how settled and close-to-active the work is** — 
 Title + 1–2 sentence description is sufficient. Full template not required.
 
 ### To Do / In Progress (actively being worked soon or now)
-Full template:
+Full template (opening field matches type label — see Section 2):
 ```
 Title:
-Issue/Feature:
+[Issue: / Feature: / Improvement: / Test: / Task:]
 Description:
 Acceptance Criteria (optional):
 ```
@@ -70,7 +85,7 @@ Acceptance Criteria (optional):
 Full template, always — this is the project's permanent historical record:
 ```
 Title:
-Issue/Feature:
+[Issue: / Feature: / Improvement: / Test: / Task:]
 Description:
 Acceptance Criteria (optional):
 Outcome:
