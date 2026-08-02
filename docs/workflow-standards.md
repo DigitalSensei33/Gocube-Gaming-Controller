@@ -32,7 +32,7 @@ Type labels represent **what kind of work it is** — tracked via GitHub Labels.
 | `improvement` | Refining/optimizing something that already works |
 | `documentation` | Improvements or additions to project documentation |
 | `research` | Investigative work (external research, data-gathering) not yet tied to a specific fix or feature |
-| `test` | Verification/testing work not itself investigating a bug (e.g., running an established test case, confirming a feature meets Acceptance Criteria) |
+| `test` | Regression testing — re-running established test cases to confirm existing functionality still works after a change. Not used for verifying brand-new features (see below); may be combined with `bug` or `research` when systematic/repeated testing is the method used to characterize or investigate a known issue |
 | `chore` | Maintenance/tooling/organizational work (renaming files, `.gitignore` edits, folder setup) — not a feature, improvement, or bug |
 
 **Feature vs. Improvement test:** If it's the *first version* of something that does a new thing → `feature`. If it's making an *existing, working* thing better/faster/cleaner → `improvement`.
