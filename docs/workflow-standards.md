@@ -114,7 +114,7 @@ Use the dedicated bug template (Section 4). Once `/documentation/qa/bug-reports/
 ## 4. Bug Report Template
 
 ```
-## Title:
+## BUG: [short description]
 
 ## Description:
 
@@ -124,11 +124,17 @@ Use the dedicated bug template (Section 4). Once `/documentation/qa/bug-reports/
 
 ## Actual behavior:
 
-## Severity:
+| **Severity** | **Priority** | **Environment** |
+| --- | --- | --- |
+| | | |
 
-## Priority:
+# **[CLOSED]** (once resolved — marks the transition into resolution content below; omit while still open)
 
-## Environment:
+## Root Cause:
+
+## Resolution:
+
+## Supporting Evidence: (optional)
 ```
 
 Full detailed reports live in `/docs/QA/bug-reports/`. Kanban cards may carry a short summary + reference (`See BUG-004`) once that system is populated.
