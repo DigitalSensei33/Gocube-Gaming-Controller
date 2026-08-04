@@ -79,21 +79,31 @@ Title + 1–2 sentence description is sufficient. Full template not required.
 ### To Do / In Progress (actively being worked soon or now)
 Full template (opening field matches type label — see Section 2):
 ```
-Title:
-[Issue: / Feature: / Improvement: / Test: / Task:]
-Description:
-Acceptance Criteria (optional):
+## Title:
+
+## [Issue: / Feature: / Improvement: / Test: / Task:]
+
+## Description:
+
+## Acceptance Criteria (optional):
+
 ```
 
 ### Done (completed work)
 Full template, always — this is the project's permanent historical record:
 ```
-Title:
-[Issue: / Feature: / Improvement: / Test: / Task:]
-Description:
-Acceptance Criteria (optional):
-Outcome:
-Remaining Issues:
+## Title:
+
+## [Issue: / Feature: / Improvement: / Test: / Task:]
+
+## Description:
+
+## Acceptance Criteria (optional):
+
+## Outcome:
+
+## Remaining Issues:
+
 ```
 
 ### Bugs (any column)
@@ -104,14 +114,21 @@ Use the dedicated bug template (Section 4). Once `/documentation/qa/bug-reports/
 ## 4. Bug Report Template
 
 ```
-Title:
-Description:
-Steps to reproduce:
-Expected behavior:
-Actual behavior:
-Severity:
-Priority:
-Environment:
+## Title:
+
+## Description:
+
+## Steps to reproduce:
+
+## Expected behavior:
+
+## Actual behavior:
+
+## Severity:
+
+## Priority:
+
+## Environment:
 ```
 
 Full detailed reports live in `/docs/QA/bug-reports/`. Kanban cards may carry a short summary + reference (`See BUG-004`) once that system is populated.
@@ -121,12 +138,17 @@ Full detailed reports live in `/docs/QA/bug-reports/`. Kanban cards may carry a 
 ## 4a. Test Case Template
 
 ```
-ID:
-Title:
-Preconditions:
-Steps:
-Expected Result:
-Related Issue:
+## ID:
+
+## Title:
+
+## Preconditions:
+
+## Steps:
+
+## Expected Result:
+
+## Related Issue(s):
 ```
 
 Test case definitions (the "library" — what a test *is*) live in `/docs/QA/test-cases/`, filed under the category-prefix ID system (Section 6), one file per test case, named by ID only (e.g., `BLE-01.md`).
