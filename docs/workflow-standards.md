@@ -261,7 +261,7 @@ Current version: **0.7** (fully playable baseline, used to complete Dark Souls 3
 | 0.8 | New-user usability: `.bat` scripts, module renaming, generalized input naming, doc folder structure, README roadmap |
 | 0.8.x | Smaller patches (e.g., console output cleanup) as needed between milestones |
 | 0.9 | Yaw drift fix reaching sustained gameplay target (30–60+ min, no recalibration), gyro HUD hotkey toggle |
-| 1.0 | Yaw drift meaningfully/fully solved **and** config module (MAC address, key mappings, tunable values) both complete |
+| 1.0 | Yaw drift compensation refined to 1-2 manual resets per hour max, paired with a near-instant reset mechanism. **and** config module (MAC address, key mappings, tunable values) both complete |
 
 GitHub **Milestones** are used to group issues per version and track progress; Milestone descriptions double as draft patch notes.
 
