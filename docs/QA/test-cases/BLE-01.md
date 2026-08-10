@@ -15,3 +15,4 @@
 Cube successfully is detected and connects to software from sleep state.
 
 ## Related Issue(s):
+see `BUG-001`
