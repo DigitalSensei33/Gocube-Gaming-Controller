@@ -278,7 +278,7 @@ class AdvancedGyroController:
     def __init__(self, input_queue: InputQueueSystem, debug: bool = True, enable_hud: bool = True):
         self.debug = debug
         self.input_queue = input_queue
-        from directinput import press_key, release_key, CHAR_MAP
+        from sendinput import press_key, release_key, CHAR_MAP
         self.press_key = press_key; self.release_key = release_key; self.key_map = CHAR_MAP
         
         self.movement_keys = {

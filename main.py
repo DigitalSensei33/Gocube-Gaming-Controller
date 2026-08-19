@@ -24,7 +24,7 @@ from input_queue import InputQueueSystem, InputPriority, InputType
 from input_queue import AdvancedGyroController as QuaternionGyroController
 
 # Import face turn processor
-from enhanced_face_turns import EnhancedFaceTurnProcessor
+from face_turns import EnhancedFaceTurnProcessor
 
 # Disable pyautogui failsafe for gaming
 pyautogui.FAILSAFE = False
