@@ -1,5 +1,5 @@
 ## IMPORTANT:
-Currently there is not a setup.bat and run.bat prepared as referred to in this README. they will be added very soon for ease of use. for now, virtual environment must be created yourself, and main.py ran manually.
+Currently, setup.bat and run.bat are experimental, and not fully tested yet.
 
 ## Gocube Gaming Controller Overview
 
